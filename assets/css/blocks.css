@@ -7842,3 +7842,32 @@ img.img-mouse {
 .team-v1 li > h3 {
 	color: #555;
 }
+
+span.mandatory {
+    display: inherit;
+    color: #cf1e1e;
+}
+
+#blonay_profiler_header {
+    background: #5f5f5f;
+    color: gray;
+}
+
+#blonay_profiler_header h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+}
+
+label {
+    color: #555;
+    font-weight: normal;
+}
+
+#blonay_profiler_header p {
+    color: #f1f1f1;
+    font-size: 16px;
+}
+

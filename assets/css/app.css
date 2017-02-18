@@ -58,6 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: none;
 	font-weight: normal;
 	font-family: "Open Sans", Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 25px;
 }
 
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
@@ -570,6 +572,11 @@ h3.heading-xs {
 .btn {
 	box-shadow: none;
 	border-radius: 0;
+	font-size: 18px;
+	padding: 10px 25px;
+	float: right;
+	background: #262f72;
+	color: #fff;
 }
 .btn-u {
 	border: 0;

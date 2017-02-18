@@ -9,53 +9,34 @@
 </head>
 
 <body>
-	<div id="top-header" class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="container">
-		<div class="top-contact pull-right">
-		  <ul>
-<?php wp_nav_menu( array(
-	'theme_location' => 'top-right-menu',
-	'container' => false,
-	'items_wrap' => '%3$s',
-	'menu_class' => 'top-right-menu',
-	'walker' => new wp_bootstrap_navwalker()
- ) ); ?>
-		  </ul>
-		  <p><b class="free_12">Call:</b> <span>0203 146 5555</span> </p>
+	<div class="wrapper">
+		<!--=== Header ===-->
+		<div class="header">
+			<div class="container">
+				<!-- Logo -->
+				<a href="<?php bloginfo( 'url' ); ?>" class="logo"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/logo.jpg" class="img-responsive" alt="Logo"> </a>
+				<!-- End Logo -->
+
+				<!-- Toggle get grouped for better mobile display -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+				<!-- End Toggle -->
+			</div><!--/end container-->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+				<div class="container">
+					<ul class="nav navbar-nav">
+						<?php wp_nav_menu( array( 
+							'theme_location' => 'primary',
+							'container' => false,
+							'menu_class' => 'nav navbar-nav',
+							'walker' => new wp_bootstrap_navwalker()
+						));
+						?>
+					</ul>
+				</div><!--/end container-->
+			</div><!--/navbar-collapse-->
 		</div>
-	  </div>
-	  <nav class="nav_10">
-		<div class="container">
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span> 
-				<span class="icon-bar"></span> 
-				<span class="icon-bar"></span> 
-			</button>
-			<a href="<?php bloginfo( 'url' ); ?>" class="navbar-brand"><img id="bsme_logo" src="<?php echo get_bloginfo('template_directory');?>/images/logo.png" class="img-responsive" alt="#"> </a> </div>
-		  <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-<?php wp_nav_menu( array( 
-	'theme_location' => 'primary',
-	'container' => false,
-	'menu_class' => 'nav navbar-nav',
-	'walker' => new wp_bootstrap_navwalker()
-));
-?>
-
-<?php wp_nav_menu( array( 
-'theme_location' => 'primary-mobile',
-'depth' => 1,
-'container' => false,
-'menu_class' => 'nav navbar-nav nav-menu-mobile',
-'walker' => new wp_bootstrap_navwalker()
-) );
-?>
-			</ul>
-		  </div>
-		</div>
-	  </nav>
-	</div>
-
-
